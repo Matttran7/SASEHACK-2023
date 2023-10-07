@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskCard = ({ task }) => {
+const TaskCard = ({ task, onDelete }) => {
     const { taskName, difficulty, urgency } = task; // str , int , int
 
     return (
@@ -8,6 +8,7 @@ const TaskCard = ({ task }) => {
             <h3>{taskName}</h3>
             <p> Difficulty: {difficulty} </p>
             <p> Urgency: {urgency} </p>
+            <button onClick={() => onDelete(taskName)}>Delete</button>
         </div>
     );
 };

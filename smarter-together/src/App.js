@@ -20,7 +20,9 @@ function App() {
 
   return (
     <div className='NumberUsersInput'>
+      {/* get NumUsers input*/}
       <NumUsers setNumUsers={setNumUsers} />
+      {/* dynamic TaskCardContainer based on numUsers*/}
       {[...Array(numUsers)].map((_, index) => (
         <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
       ))}
