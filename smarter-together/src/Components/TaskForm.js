@@ -32,7 +32,7 @@ const TaskForm = ({ taskList, setTaskList }) => {
 
     return (
         <form className="create" onSubmit={handleAddTask}>
-            <h3>Add a new Task</h3>
+            <h3>Add Task</h3>
 
             <label>Task Name:</label>
             <input
@@ -60,7 +60,7 @@ const TaskForm = ({ taskList, setTaskList }) => {
                 onChange={({ x }) => setUrgency(x)}
             />
 
-            <button type="submit">Add Another Task</button>
+            <button type="submit">Add A Task</button>
         </form>
     );
 };
