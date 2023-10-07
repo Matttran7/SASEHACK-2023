@@ -1,22 +1,27 @@
 import React, { useState } from 'react';
-import './NumUsers.css'; 
+import './NumUsers.css';
 import TaskCardContainer from './TaskCardContainer';
 
-const NumUsers = () => {
+const NumUsers = ( contextList ) => {
   const [userNumber, setUserNumber] = useState('');
+
+  // const [taskList, setTaskList] = useState([]);
+
+
 
   const handleInputChange = (e) => {
     const value = e.target.value.trim();
     // num 1-9
     setUserNumber(value === '' ? '' : parseInt(value) || '');
   };
-  
+
   const renderTaskCardContainer = () => {
-    const taskCardContainer = [];
+    const taskCardContainers = [];
     for (let i = 1; i <= parseInt(userNumber); i++) {
-        taskCardContainer.push(<TaskCardContainer key={i} tasks={generateTasksForUser(i)} />);
+        taskCardContainers.push(<TaskCardContainer key={i} />);
     }
-    return taskCardContainer;
+    contextList = taskCardContainers;
+    return taskCardContainers;
   };
 
   const generateTasksForUser = (userId) => {
