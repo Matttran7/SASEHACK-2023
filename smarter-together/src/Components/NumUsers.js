@@ -1,32 +1,44 @@
 import React, { useState } from 'react';
+import './NumUsers.css'; 
+import TaskCardContainer from './TaskCardContainer';
 
 const NumUsers = () => {
   const [userNumber, setUserNumber] = useState('');
 
   const handleInputChange = (e) => {
-    const value = parseInt(e.target.value) || 0;
-    // num 1-99
-    setUserNumber(value);
-    console.log(value + "<-----");
+    const value = e.target.value.trim();
+    // num 1-9
+    setUserNumber(value === '' ? '' : parseInt(value) || '');
+  };
+  
+  const renderTaskCardContainer = () => {
+    const taskCardContainer = [];
+    for (let i = 1; i <= parseInt(userNumber); i++) {
+        taskCardContainer.push(<TaskCardContainer key={i} tasks={generateTasksForUser(i)} />);
+    }
+    return taskCardContainer;
+  };
+
+  const generateTasksForUser = (userId) => {
+    return [
+    ];
   };
 
   return (
     <div>
-    <header style={{ background: '#333', padding: '10px', textAlign: 'center', color: 'white' }}>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        
-        <label htmlFor="userNumber"></label>
+    <header>
+        <div className='UserInputBox'>
         <input
             type="text"
             id="userNumber"
             value={userNumber}
             onChange={handleInputChange}
-            pattern="[0-9]*"
-            maxLength="2"
+            pattern="[1-9]*"
+            maxLength="1"
         />
-        <p> Number: {parseInt(userNumber) || 0}</p>
         </div>
       </header>
+      {renderTaskCardContainer()}
     </div>
   );
 };
