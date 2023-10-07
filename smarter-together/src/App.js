@@ -1,8 +1,11 @@
+import React from 'react';
+import NumUsers from './Components/NumUsers';
+
 function App() {
   return (
-      <header className="App-header">
-        Hello world!
-      </header>
+      <div className='NumberUsersInput'>
+        <NumUsers />
+      </div>
   );
 }
 
