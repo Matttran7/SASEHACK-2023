@@ -11,9 +11,9 @@ const TaskCardContainer = ({ id }, ref) => {
   useImperativeHandle(ref, () => ({
     getData,
   }));
-  const deleteTask = (taskName) => {
+  const deleteTask = (id) => {
     // Filter out the task to be deleted
-    const updatedTaskList = taskList.filter((task) => task.taskName !== taskName);
+    const updatedTaskList = taskList.filter((task) => task.id !== id);
     setTaskList(updatedTaskList);
   };
 
@@ -21,7 +21,7 @@ const TaskCardContainer = ({ id }, ref) => {
     <div id={id}>
       <div>
         {taskList && taskList.map((task) => (
-          <TaskCard key={task.taskName} task={task} onDelete={deleteTask} />
+          <TaskCard key={task.id} task={task} onDelete={deleteTask} />
         ))}
       </div>
       <TaskForm taskList={taskList} setTaskList={setTaskList} />

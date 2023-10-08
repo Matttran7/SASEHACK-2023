@@ -1,14 +1,14 @@
 import React from 'react';
 
 const TaskCard = ({ task, onDelete }) => {
-    const { taskName, difficulty, urgency } = task; // str , int , int
+    const { id, taskName, difficulty, urgency } = task; // str , int , int
 
     return (
         <div className="task-card">
             <h3>{taskName}</h3>
             <p> Difficulty: {difficulty} </p>
             <p> Urgency: {urgency} </p>
-            <button onClick={() => onDelete(taskName)}>Delete</button>
+            <button onClick={() => onDelete(id)}>Delete</button>
         </div>
     );
 };
