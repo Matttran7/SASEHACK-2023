@@ -26,6 +26,14 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     overflow-y: auto;
     overflow-x: hidden;
+    font-family: "Space Grotesk",sans-serif;
+  }
+
+  .titleOfSortedListBeingDisplayed{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 1rem;
   }
 
   /* Custom scrollbar style */

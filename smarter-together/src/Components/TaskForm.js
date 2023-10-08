@@ -5,8 +5,8 @@ import './TaskForm.css';
 
 const TaskForm = ({ taskList, setTaskList }) => {
     const [taskName, setTaskName] = useState('');
-    const [difficulty, setDifficulty] = useState(0);
-    const [urgency, setUrgency] = useState(0);
+    const [difficulty, setDifficulty] = useState(5);
+    const [urgency, setUrgency] = useState(5);
     const [emptyFields, setEmptyFields] = useState([]);
 
     const handleAddTask = (e) => {
@@ -49,7 +49,7 @@ const TaskForm = ({ taskList, setTaskList }) => {
                 <input
                 type="range"
                 min={0}
-                max={5}
+                max={10}
                 step={1}
                 value={difficulty}
                 onChange={(e) => setDifficulty(Number(e.target.value))}
@@ -61,7 +61,7 @@ const TaskForm = ({ taskList, setTaskList }) => {
                 <input
                 type="range"
                 min={0}
-                max={5}
+                max={10}
                 step={1}
                 value={urgency}
                 onChange={(e) => setUrgency(Number(e.target.value))}

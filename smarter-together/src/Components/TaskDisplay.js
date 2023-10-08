@@ -18,7 +18,7 @@ const TaskDisplay = ({ sortedLists, setSortedLists }) => {
         <div className='taskDisplayContainer'>
           {sortedLists.map((sortedData, index) => (
             <div key={index} className='sortedListBoxDisplay'>
-              <p>List {index + 1}</p>
+              <p className='titleOfSortedListBeingDisplayed'>List {index + 1}</p>
               {sortedData.map((item, itemIndex) => (
                 <div key={itemIndex}>
                   {/* Use the TaskCard component to display each task */}

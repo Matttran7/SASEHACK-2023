@@ -1,3 +1,5 @@
+/* Background Credit to Micahel Shillingburg at https://michaelshillingburg.tumblr.com/post/134780307923 */
+
 .task-card-container-list {
   display: flex;
   flex-wrap: nowrap;
@@ -30,7 +32,7 @@ body {
   background-color: #ffffff;
   font-family: "Space Grotesk",sans-serif;;
   overflow: auto;
-  background-image: url('https://media.giphy.com/media/l4KihuqeuJEi9qLSM/giphy.gif');
+  background-image: url(./backgrounds/rippling_background.gif);
   background-size: cover;
 }
 
