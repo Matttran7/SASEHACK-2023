@@ -67,7 +67,7 @@ function App() {
               onStudyIntervalChange={setStudyInterval}
             />}
 
-        {!submitClicked && <button className='SubmitBtn' onClick={logAllTaskData}>Log All Task Data</button>}
+        {!submitClicked && <button onClick={logAllTaskData}>Log All Task Data</button>}
 
         {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
 
