@@ -34,39 +34,46 @@ const TaskForm = ({ taskList, setTaskList }) => {
     };
 
     return (
-        <form className="create" onSubmit={handleAddTask}>
-            <input
-            type="text"
-            value={taskName}
-            onChange={(e) => setTaskName(e.target.value)}
-            className={emptyFields.includes('taskName') ? 'error' : ''}
-            />
+        <div className='formContainer'>
+            <form className="create" onSubmit={handleAddTask}>
+                <input
+                type="text"
+                value={taskName}
+                onChange={(e) => setTaskName(e.target.value)}
+                className={emptyFields.includes('taskName') ? 'error' : ''}
+                placeholder='Task'
+                />
 
-            <input
-            type="range"
-            min={0}
-            max={5}
-            step={1}
-            value={difficulty}
-            onChange={(e) => setDifficulty(Number(e.target.value))}
-            />
-            <span className='SpanWord'>Difficulty </span>
-            <span className='SpanVal'>{difficulty}</span><br></br>
+                <br></br>
+                <span className='SpanWord'>Difficulty </span>
+                <input
+                type="range"
+                min={0}
+                max={5}
+                step={1}
+                value={difficulty}
+                onChange={(e) => setDifficulty(Number(e.target.value))}
+                />
+                <span className='SpanVal'>{difficulty}</span><br></br>
 
-            <input
-            type="range"
-            min={0}
-            max={5}
-            step={1}
-            value={urgency}
-            onChange={(e) => setUrgency(Number(e.target.value))}
-            />
-            <span className='SpanWord'>Urgency </span>
-            <span className='SpanVal'>{urgency}</span>
-            <div className="button-container">
-                <button type="submit">Add</button>
-            </div>
-        </form>
+
+                <span className='SpanWord'>Urgency </span>
+                <input
+                type="range"
+                min={0}
+                max={5}
+                step={1}
+                value={urgency}
+                onChange={(e) => setUrgency(Number(e.target.value))}
+                />
+                <span className='SpanVal'>{urgency}</span>
+
+                <div className="button-container">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+
     );
 };
 

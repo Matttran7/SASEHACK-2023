@@ -20,12 +20,14 @@ const TaskCardContainer = ({ id }, ref) => {
 
   return (
     <div id={id} className="task-card-container">
-      <div>
-        {taskList && taskList.map((task) => (
-          <TaskCard key={task.id} task={task} onDelete={deleteTask} />
-        ))}
+      <div className='task-card-content'>
+        <div className='content-container'>
+          {taskList && taskList.map((task) => (
+            <TaskCard key={task.id} task={task} onDelete={deleteTask} />
+          ))}
+        </div> 
       </div>
-      <div className="banner"></div>
+      <div className="banner"><p>Add Task</p></div>
       <div className="task-form">
         <TaskForm taskList={taskList} setTaskList={setTaskList} />
       </div>

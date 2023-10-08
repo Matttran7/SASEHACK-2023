@@ -19,27 +19,39 @@ body, html{
     display: flex;
     flex-direction: column;
     min-width: 200px;
-    width: 200px;
+    width: 25rem;
     height: 600px;
     padding: 10px;
     margin: 10px;
-    background-color: #ffde67;
+    background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    overflow: hidden;
+    overflow:hidden
   }
   
   .banner {
     position: absolute;
-    bottom: -150px;
+    bottom: -14rem;
     left: 0;
     width: 100%;
-    height: 150px;
-    background-color: #ffde67;
+    height: 13rem;
+    background-color: #2545ad;
     transition: height .7s ease-in-out;
     transform-origin: top center;
     transform: rotate(180deg);
-    z-index: 2; 
+    z-index: 2;
+    display: flex; /* Use flexbox to center its children */
+    justify-content: center; /* Horizontally center the children */
+    align-items: center; /* Vertically center the children */
+  }
+
+  .banner p {
+    transform: rotate(180deg); /* Rotate the <p> element by 180 degrees */
+    margin: 0; /* Remove any default margin */
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: "Space Grotesk",sans-serif;
+    color: whitesmoke;
   }
   
   .task-card-container:hover .banner {
@@ -48,16 +60,23 @@ body, html{
   
   .task-form {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
+    bottom: 0rem;
+    left: 48%;
     transform: translateX(-50%);
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     z-index: 1; 
+    width: 100%;
   }
   
   .task-card-container:hover .task-form {
     opacity: 1;
   }
   
-  
+  .task-card-content {
+    /* Create an inner container for content with scrollable overflow */
+    overflow: auto; /* Add scrollbars when content overflows */
+    flex-grow: 1; /* Allow the content to grow and occupy available space */
+    padding: 10px; /* Add padding if needed */
+  }
+

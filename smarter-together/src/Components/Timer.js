@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from './Modal'; // Import your Modal component
+import './Timer.css';
 
 const Timer = ({ studyInterval, breakInterval }) => {
   const [currentTime, setCurrentTime] = useState(studyInterval * 60); // Initial time in seconds
@@ -55,16 +56,15 @@ const Timer = ({ studyInterval, breakInterval }) => {
   };
 
   return (
-    <div>
+    <div className='timer-container'>
       <h2>{intervalType} Time</h2>
       <div>
         <p>{formatTime(currentTime)}</p>
       </div>
       <div>
         <button onClick={isRunning ? stopTimer : startTimer}>
-          {isRunning ? 'Stop' : 'Start'}
+          {isRunning ? 'stop' : 'start'}
         </button>
-        <button onClick={resetTimer}>Reset</button>
       </div>
       {showBreakTimeModal && (
         <Modal isOpen={true} onClose={closeBreakTimeModal} />

@@ -26,15 +26,17 @@ body, html{
   margin: 0 0 10px 0;
   font-size: 2rem;
   color: white;
+  text-decoration: underline;
 }
 
 .task-card p {
   margin: 0;
-  font-size: .7rem;
+  font-size: 1rem;
   color: white;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-indent: 1rem;
 }
 
 .task-card span {
