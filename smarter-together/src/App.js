@@ -1,30 +1,33 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import NumUsers from './Components/NumUsers';
-import TaskForm from './Components/TaskForm';
-import { useState } from 'react';
-import SubmitButton from './Components/SubmitButton';
-import {sortHighLow} from './ProcessData/SortComponents';
+import TaskCardContainer from './Components/TaskCardContainer';
 
 function App() {
-  const [taskList, setTaskList] = useState([]); 
-  const [isSorted, setSorted] = useState(false);
+  const [numUsers, setNumUsers] = useState(0);
+  const taskCardContainerRefs = useRef([]);
 
-  const testBtn = () => {
-    console.log(taskList)
-  }
-  const handleToggleSort = () => {
-    if (!isSorted) {
-      setSorted(true);
+  const logAllTaskData = () => {
+    const newData = [];
+    for (let i = 0; i < numUsers; i++) {
+      const taskCardContainerInstance = taskCardContainerRefs.current[i];
+      if (taskCardContainerInstance) {
+        const taskCardContainerData = taskCardContainerInstance.getData();
+        newData.push(taskCardContainerData);
+      }
     }
+    console.log(newData);
   };
 
   return (
-      <div className='NumberUsersInput'>
-        {!isSorted && <NumUsers />}
-        <TaskForm taskList={taskList} setTaskList={setTaskList} />
-        <button onClick={testBtn}>dd</button>
-        {!isSorted && <SubmitButton onClick={handleToggleSort} label="Sort" />}
-      </div>
+    <div className='NumberUsersInput'>
+      {/* get NumUsers input*/}
+      <NumUsers setNumUsers={setNumUsers} />
+      {/* dynamic TaskCardContainer based on numUsers*/}
+      {[...Array(numUsers)].map((_, index) => (
+        <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
+      ))}
+      <button onClick={logAllTaskData}>Log All Task Data</button>
+    </div>
   );
 }
 
