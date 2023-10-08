@@ -8,7 +8,7 @@ const TaskCard = ({ task, onDelete }) => {
             <h3>{taskName}</h3>
             <p> Difficulty: {difficulty} </p>
             <p> Urgency: {urgency} </p>
-            <button onClick={() => onDelete(id)}>Delete</button>
+            <span onClick={() => onDelete(id)} className="material-symbols-outlined">Delete</span>
         </div>
     );
 };

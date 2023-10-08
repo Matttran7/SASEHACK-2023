@@ -10,3 +10,41 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 body, html{
   font-family: "Space Grotesk",sans-serif;
 }
+
+.task-card {
+  background: #28373b;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  max-width: 30rem;
+  width: 70%;
+}
+
+.task-card h3{
+  margin: 0 0 10px 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.task-card p {
+  margin: 0;
+  font-size: .7rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-card span {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  cursor: pointer;
+  background: #333;
+  padding: 6px;
+  border-radius: 50%;
+  color: #b9bbba;
+  font-size: 1.5rem;
+}
