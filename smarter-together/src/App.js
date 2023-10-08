@@ -40,32 +40,43 @@ function App() {
   };
 
   return (
-    <div className='NumberUsersInput'>
 
-      {!submitClicked && <NumUsers setNumUsers={setNumUsers} />}
+    <div>
 
-      
-      <div className="task-card-container-list">    
-      {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
-        <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
-      ))}
+      {/* <div>
+        <WavyBackground />
+      </div> */}
+
+      <div className='NumberUsersInput'>
+
+        
+
+        {!submitClicked && <NumUsers setNumUsers={setNumUsers} />}
+
+        
+        <div className="task-card-container-list">    
+        {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
+          <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
+        ))}
+        </div>
+        
+        {!submitClicked && <IntervalSettings
+              breakInterval={breakInterval}
+              studyInterval={studyInterval}
+              onBreakIntervalChange={setBreakInterval}
+              onStudyIntervalChange={setStudyInterval}
+            />}
+
+        {!submitClicked && <button className='SubmitBtn' onClick={logAllTaskData}>Log All Task Data</button>}
+
+        {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
+
+        {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
+
+
       </div>
-      
-      {!submitClicked && <IntervalSettings
-            breakInterval={breakInterval}
-            studyInterval={studyInterval}
-            onBreakIntervalChange={setBreakInterval}
-            onStudyIntervalChange={setStudyInterval}
-          />}
-
-      {!submitClicked && <button className='SubmitBtn' onClick={logAllTaskData}>Log All Task Data</button>}
-
-      {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
-
-      {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
-
-      
     </div>
+
   );
 }
 
