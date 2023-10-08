@@ -13,6 +13,7 @@
   padding: 10px;
   margin: 10px;
   animation: enterFromBottom 0.7s linear;
+  flex-shrink: 0;
 }
 
 @keyframes enterFromBottom {
@@ -34,7 +35,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #ffffff;
-  font-family: Roboto;
+  font-family: "Space Grotesk",sans-serif;;
   overflow: hidden;
 }
 
@@ -77,4 +78,51 @@ body::after {
   }
 }
 
+.SubmitBtn {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 25px;
+  padding: 25px 20px;
+  display: inline-block; /* or block, depending on your layout preference */
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  color: #000000;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+.SubmitBtn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.SubmitBtn:hover,
+.SubmitBtn:active {
+  color: #ffffff;
+  background: #000000;
+}
+/** --------------- Top of page ---*/
+.header {
+  background-color: transparent;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+  margin-top: 0;
+}
 
+.line1,
+.line2 {
+  margin-bottom: 10px;
+  display: flex;
+}
+.interval-settings-container {
+  display: flex;
+  justify-content: space-between;
+}

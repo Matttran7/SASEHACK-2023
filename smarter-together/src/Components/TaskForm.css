@@ -74,7 +74,7 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   } */
 
   
-  input[type="range"]{
+  .create input[type="range"]{
     -webkit-appearance:none;
     -moz-appearance: none;
     width:120px;
@@ -88,7 +88,7 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: middle;
   }
   
-  input[type="range"]::-webkit-slider-thumb{
+  .create input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance:none;
     border-radius: 0%;
     border-color: transparent;
@@ -98,7 +98,7 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     position:relative;
     z-index:3;
   }
-  .input[type="range"]::-webkit-slider-thumb:after{
+  .create input[type="range"]::-webkit-slider-thumb:after{
     content:" ";
     width:160px;
     height:10px;
@@ -110,7 +110,7 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
   }
   /* -------------------------- Firefox */
-  input[type="range"]::-moz-range-thumb { 
+  .create input[type="range"]::-moz-range-thumb { 
     -moz-appearance: none;
     border-radius: 0%;
     border-color: transparent;
@@ -121,7 +121,7 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     z-index:3;
   }
   
-  input[type="range"]::-moz-range-thumb:after{
+  .create input[type="range"]::-moz-range-thumb:after{
     content:" ";
     width:160px;
     height:10px;
