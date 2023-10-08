@@ -1,0 +1,107 @@
+/* Background Credit to Micahel Shillingburg at https://michaelshillingburg.tumblr.com/post/134780307923 */
+
+.task-card-container-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+    align-items: flex-start;
+    overflow: auto;
+  }
+  
+  
+  @keyframes enterFromBottom {
+    from {
+      transform: translateY(120%);
+    }
+    50% {
+      transform: translateY(-2%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    font-family: "Space Grotesk",sans-serif;;
+    overflow: auto;
+    background-image: url(../backgrounds/rippling_background.gif);
+    background-size: cover;
+  }
+  
+  
+  .SubmitBtn {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 0 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: all 0.3s;
+    border: none;
+    border-radius: 2rem;
+    color: #000000;
+    background-color: whitesmoke;
+    width: 16rem;
+    height: 4rem;
+    position: absolute;
+    right: 0;
+    margin-right: 3rem;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+  }
+  .SubmitBtn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .SubmitBtn:hover,
+  .SubmitBtn:active {
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+  }
+  /** --------------- Top of page ---*/
+  .header {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+  }
+  
+  .line1,
+  .line2 {
+    margin-bottom: 10px;
+    display: flex;
+  
+  }
+  .interval-settings-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .displayTasks {
+    display: flex;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
