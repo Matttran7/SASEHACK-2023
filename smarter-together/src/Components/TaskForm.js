@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid'
 import InputSlider from 'react-input-slider';
 import React, { useState } from 'react';
 
@@ -16,6 +17,7 @@ const TaskForm = ({ taskList, setTaskList }) => {
         }
 
         const newTask = {
+            id: uuidv4(),
             taskName,
             difficulty,
             urgency,
