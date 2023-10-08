@@ -9,3 +9,7 @@ Features:
 - Forces group to have the same break time and same break activity
 - Select from preselected activities to do during breaks or customized
 - Alerts every K minutes whenever the user should take a break
+
+
+Requirements:
+> npm install uuid
