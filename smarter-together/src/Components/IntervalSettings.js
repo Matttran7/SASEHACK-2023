@@ -1,35 +1,34 @@
 import React from 'react';
 import InputSlider from 'react-input-slider';
-import './IntervalSettings.css';
 
 const IntervalSettings = ({ breakInterval, studyInterval, onBreakIntervalChange, onStudyIntervalChange }) => {
   return (
-<div className="interval-settings">
-  <div className="interval-group">
-    <h2>Study Interval</h2>
-    <input
-      type="range"
-      min={1}
-      max={90}
-      value={studyInterval}
-      onChange={(e) => onStudyIntervalChange(e.target.value)}
-    />
-    <p>{studyInterval}</p>
-  </div>
+    <div>
+      <h2>Study Interval</h2>
+      <InputSlider
+        axis='x'
+        x={studyInterval}
+        xmin={0.1}
+        xmax={90}
+        onChange={({ x }) => {
+          onStudyIntervalChange(x);
+        }}
+      />
+      <p>Minutes: {studyInterval }</p>
 
-  <div className="interval-group">
-    <h2>Break Interval</h2>
-    <input
-      type="range"
-      min={1}
-      max={20}
-      value={breakInterval}
-      onChange={(e) => onBreakIntervalChange(e.target.value)}
-    />
-    <p>{breakInterval}</p>
-  </div>
-</div>
+      <h2>Break Interval</h2>
+      <InputSlider
+        axis='x'
+        x={breakInterval}
+        xmin={1}
+        xmax={20}
+        onChange={({ x }) => {
+          onBreakIntervalChange(x);
+        }}
+      />
+      <p>Minutes: {breakInterval}</p>
 
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './NumUsers.css';
 
 const NumUsers = ({ setNumUsers }) => {
   const [userNumber, setUserNumber] = useState(1);
@@ -14,7 +13,7 @@ const NumUsers = ({ setNumUsers }) => {
     <div>
       <header>
         <div className='UserInputBox'>
-          <h2>Study Interval</h2>
+        <label htmlFor="userNumber">Select Number of Users:</label>
           <input
             type="range"
             id="userNumber"
@@ -23,7 +22,7 @@ const NumUsers = ({ setNumUsers }) => {
             value={userNumber}
             onChange={handleInputChange}
           />
-          <p>{userNumber}</p>
+          <span>{userNumber}</span>
         </div>
       </header>
     </div>
