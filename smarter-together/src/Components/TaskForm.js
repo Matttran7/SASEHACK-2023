@@ -28,8 +28,8 @@ const TaskForm = ({ taskList, setTaskList }) => {
         setTaskList((prevTaskList) => [...prevTaskList, newTask]);
 
         setTaskName('');
-        setDifficulty(0);
-        setUrgency(0);
+        setDifficulty(5);
+        setUrgency(5);
         setEmptyFields([]);
     };
 
