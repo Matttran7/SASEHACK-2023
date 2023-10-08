@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './TaskCard.css';
 const TaskCard = ({ task, onDelete }) => {
     const { id, taskName, difficulty, urgency } = task; // str , int , int
 
