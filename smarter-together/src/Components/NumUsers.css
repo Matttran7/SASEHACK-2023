@@ -30,7 +30,7 @@ header {
     padding: 0;
 }
 .UserInputBox h2 {
-  margin-bottom: 0px; 
+  margin-bottom: 14px; 
   font-weight: 200;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -47,12 +47,17 @@ header {
 }
 
 .UserInputBox input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
   width: 15px;
   height: 15px; 
   background: #fff; 
   border: none; 
   border-radius: 50%;
   cursor: pointer;
+  margin-top: -7.5px;
+}
+.UserInputBox input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
 }
 
 .UserInputBox input[type="range"]::-moz-range-thumb {
@@ -63,8 +68,14 @@ header {
   cursor: pointer;
 }
 
-.UserInputBox input[type="range"]::-webkit-slider-runnable-track,
-.UserInputBox input[type="range"]::-moz-range-track {
+.UserInputBox input[type="range"]::-moz-range-track{
+  width: 100%;
+  height: 1px; 
+  background: #ffffff; 
+  border: none;
+}
+.UserInputBox input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   width: 100%;
   height: 1px; 
   background: #ffffff; 
