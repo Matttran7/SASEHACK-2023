@@ -1,11 +1,12 @@
 import { v4 as uuidv4 } from 'uuid'
 import InputSlider from 'react-input-slider';
 import React, { useState } from 'react';
+import './TaskForm.css';
 
 const TaskForm = ({ taskList, setTaskList }) => {
     const [taskName, setTaskName] = useState('');
-    const [difficulty, setDifficulty] = useState(50);
-    const [urgency, setUrgency] = useState(50);
+    const [difficulty, setDifficulty] = useState(0);
+    const [urgency, setUrgency] = useState(0);
     const [emptyFields, setEmptyFields] = useState([]);
 
     const handleAddTask = (e) => {
@@ -27,39 +28,44 @@ const TaskForm = ({ taskList, setTaskList }) => {
         setTaskList((prevTaskList) => [...prevTaskList, newTask]);
 
         setTaskName('');
-        setDifficulty(50);
-        setUrgency(50);
+        setDifficulty(0);
+        setUrgency(0);
         setEmptyFields([]);
     };
 
     return (
         <form className="create" onSubmit={handleAddTask}>
             <input
-                type="text"
-                value={taskName}
-                onChange={(e) => setTaskName(e.target.value)}
-                className={emptyFields.includes('taskName') ? 'error' : ''}
+            type="text"
+            value={taskName}
+            onChange={(e) => setTaskName(e.target.value)}
+            className={emptyFields.includes('taskName') ? 'error' : ''}
             />
 
-            <label>Task Difficulty:</label>
-            <InputSlider
-                axis="x"
-                x={difficulty}
-                xmin={0}
-                xmax={100}
-                onChange={({ x }) => setDifficulty(x)}
+            <input
+            type="range"
+            min={0}
+            max={5}
+            step={1}
+            value={difficulty}
+            onChange={(e) => setDifficulty(Number(e.target.value))}
             />
+            <span className='SpanWord'>Difficulty </span>
+            <span className='SpanVal'>{difficulty}</span><br></br>
 
-            <label>Task Urgency:</label>
-            <InputSlider
-                axis="x"
-                x={urgency}
-                xmin={0}
-                xmax={100}
-                onChange={({ x }) => setUrgency(x)}
+            <input
+            type="range"
+            min={0}
+            max={5}
+            step={1}
+            value={urgency}
+            onChange={(e) => setUrgency(Number(e.target.value))}
             />
-
-            <button type="submit">Add A Task</button>
+            <span className='SpanWord'>Urgency </span>
+            <span className='SpanVal'>{urgency}</span>
+            <div className="button-container">
+                <button type="submit">Add</button>
+            </div>
         </form>
     );
 };
