@@ -63,6 +63,7 @@ header {
   cursor: pointer;
 }
 
+.UserInputBox input[type="range"]::-webkit-slider-runnable-track,
 .UserInputBox input[type="range"]::-moz-range-track {
   width: 100%;
   height: 1px; 

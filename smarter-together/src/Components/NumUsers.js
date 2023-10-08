@@ -14,7 +14,7 @@ const NumUsers = ({ setNumUsers }) => {
     <div>
       <header>
         <div className='UserInputBox'>
-          <h2>Study Interval</h2>
+          <h2>Group Size</h2>
           <input
             type="range"
             id="userNumber"
