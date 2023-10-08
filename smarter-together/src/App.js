@@ -48,27 +48,27 @@ function App() {
       </div> */}
 
       <div className='NumberUsersInput'>
-
-        
-
-        {!submitClicked && <NumUsers setNumUsers={setNumUsers} />}
-
-        
-        <div className="task-card-container-list">    
-        {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
-          <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
-        ))}
+      <header className="header">
+        <div className="line1">
+          {!submitClicked && <NumUsers className="numusers" setNumUsers={setNumUsers} />}
+          {!submitClicked && <div className="interval-settings-container">
+            <IntervalSettings  className="intervalsettings" 
+                breakInterval={breakInterval}
+                studyInterval={studyInterval}
+                onBreakIntervalChange={setBreakInterval}
+                onStudyIntervalChange={setStudyInterval}
+              /> </div>
+          }
+          {!submitClicked && <button className="SubmitBtn" onClick={logAllTaskData}>Log All Task Data</button>}
         </div>
-        
-        {!submitClicked && <IntervalSettings
-              breakInterval={breakInterval}
-              studyInterval={studyInterval}
-              onBreakIntervalChange={setBreakInterval}
-              onStudyIntervalChange={setStudyInterval}
-            />}
-
-        {!submitClicked && <button onClick={logAllTaskData}>Log All Task Data</button>}
-
+        </header>
+        <div className='line2'>
+          <div className="task-card-container-list">    
+            {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
+              <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
+            ))}
+          </div>
+        </div>
         {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
 
         {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
