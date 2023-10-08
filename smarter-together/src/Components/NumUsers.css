@@ -30,7 +30,7 @@ header {
     padding: 0;
 }
 .UserInputBox h2 {
-  margin-bottom: 14px; 
+  margin-bottom: 1rem; 
   font-weight: 200;
   font-family: "Space Grotesk", sans-serif;
 }
@@ -55,6 +55,7 @@ header {
   border-radius: 50%;
   cursor: pointer;
   margin-top: -7.5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .UserInputBox input[type="range"]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
@@ -66,6 +67,7 @@ header {
   background: #ffffff; 
   border: none; 
   cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .UserInputBox input[type="range"]::-moz-range-track{
