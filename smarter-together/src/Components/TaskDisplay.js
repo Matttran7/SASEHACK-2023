@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskCard from './TaskCard'; // Import the TaskCard component
+import './TaskDisplay.css'
 
 const TaskDisplay = ({ sortedLists, setSortedLists }) => {
     const deleteTask = (id) => {
@@ -13,7 +14,7 @@ const TaskDisplay = ({ sortedLists, setSortedLists }) => {
     };
   
     return (
-      <div>
+      <div className='taskDisplayContainer'>
         <h2>Tasks TO-DO</h2>
         {sortedLists.map((sortedData, index) => (
           <div key={index}>

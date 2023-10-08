@@ -26,7 +26,7 @@ body, html{
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    overflow:hidden
+    overflow: hidden;
   }
   
   .banner {
@@ -60,7 +60,7 @@ body, html{
   
   .task-form {
     position: absolute;
-    bottom: 0rem;
+    bottom: 0;
     left: 48%;
     transform: translateX(-50%);
     opacity: 1;
@@ -74,10 +74,6 @@ body, html{
   }
   
   .task-card-content {
-    /* Create an inner container for content with scrollable overflow */
-    overflow: auto; /* Add scrollbars when content overflows */
-    flex-grow: 1; /* Allow the content to grow and occupy available space */
-    padding: 10px; /* Add padding if needed */
     overflow-y: auto;
   }
 

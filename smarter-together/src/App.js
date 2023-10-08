@@ -41,11 +41,8 @@ function App() {
 
   return (
 
-    <div>
+    <div className='AppContainer'>
 
-      {/* <div>
-        <WavyBackground />
-      </div> */}
 
       <div className='NumberUsersInput'>
       <header className="header">
@@ -71,8 +68,9 @@ function App() {
         </div>
         {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
 
-        {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
-
+        <div className='displayTasks'>
+          {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
+        </div>
 
       </div>
     </div>
