@@ -24,7 +24,8 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     align-items: center;
   }
   .create {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
   }
   input[type="text"]{
     font-size: 2rem;
@@ -50,7 +51,9 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: whitesmoke;
 
   }
-  button {
+  .button-container button {
+    font-weight: 400;
+    font-family: "Space Grotesk", sans-serif;
     margin-top: 0.2rem;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -63,6 +66,9 @@ body, html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 25%;
     float: right;
     margin-right: 3rem;
+  }
+  button{
+    transition: background-color 0.3s ease;
   }
   
   button:hover {

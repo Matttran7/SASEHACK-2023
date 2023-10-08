@@ -78,5 +78,6 @@ body, html{
     overflow: auto; /* Add scrollbars when content overflows */
     flex-grow: 1; /* Allow the content to grow and occupy available space */
     padding: 10px; /* Add padding if needed */
+    overflow-y: auto;
   }
 
