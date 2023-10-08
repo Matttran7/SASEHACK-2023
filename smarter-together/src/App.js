@@ -7,6 +7,8 @@ import IntervalSettings from './Components/IntervalSettings';
 function App() {
 
   const [numUsers, setNumUsers] = useState(1);
+
+  // User Break and Study intervals
   const [breakInterval, setBreakInterval] = useState(300);
   const [studyInterval, setStudyInterval] = useState(1200);
   const handleBreakIntervalChange = (newBreakInterval) => {
@@ -17,6 +19,7 @@ function App() {
   };
 
 
+  const [submitClicked, setSubmitClicked] = useState(false)
   const taskCardContainerRefs = useRef([]);
   
   const logAllTaskData = () => {
@@ -40,6 +43,7 @@ function App() {
     
     const sortedData = sortHighLow(newData);
     console.log(sortedData);
+    setSubmitClicked(!submitClicked);
   };
 
   return (
@@ -50,18 +54,21 @@ function App() {
 
 
       {/* dynamic TaskCardContainer based on numUsers*/}
-      {[...Array(numUsers || 1)].map((_, index) => (
+      {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
         <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
       ))}
+
+
+
       <button onClick={logAllTaskData}>Log All Task Data</button>
 
-      {/* <IntervalSettings 
+      {submitClicked && <IntervalSettings 
         breakInterval={breakInterval}
         studyInterval={studyInterval}
         onBreakIntervalChange={handleBreakIntervalChange}
         onStudyIntervalChange={handleStudyIntervalChange}
         
-      /> */}
+      />}
       
     </div>
   );
