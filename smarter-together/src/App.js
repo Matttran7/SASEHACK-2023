@@ -44,13 +44,13 @@ function App() {
       ))}
       <button onClick={logAllTaskData}>Log All Task Data</button>
 
-      <IntervalSettings 
+      {/* <IntervalSettings 
         breakInterval={breakInterval}
         studyInterval={studyInterval}
         onBreakIntervalChange={handleBreakIntervalChange}
         onStudyIntervalChange={handleStudyIntervalChange}
         
-      />
+      /> */}
       
     </div>
   );
