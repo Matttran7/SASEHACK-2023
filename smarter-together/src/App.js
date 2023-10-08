@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import NumUsers from './Components/NumUsers';
 import TaskCardContainer from './Components/TaskCardContainer';
 import { sortHighLow } from './ProcessData/SortComponents';
+import './App.css';
 import IntervalSettings from './Components/IntervalSettings';
 
 function App() {
@@ -38,14 +39,16 @@ function App() {
 
   return (
     <div className='NumberUsersInput'>
+
       {!submitClicked && <NumUsers setNumUsers={setNumUsers} />}
 
       
-
+      <div className="task-card-container-list">    
       {!submitClicked && [...Array(numUsers || 1)].map((_, index) => (
         <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
       ))}
-
+      </div>
+      
       {!submitClicked && <IntervalSettings
             breakInterval={breakInterval}
             studyInterval={studyInterval}

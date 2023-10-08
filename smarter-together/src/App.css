@@ -1,0 +1,28 @@
+.task-card-container-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: left;
+    margin: auto;
+    align-items: flex-start;
+  }
+
+  .task-card-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: 10px;
+    animation: enterFromBottom .7s linear; /* Animation properties */
+  }
+
+  @keyframes enterFromBottom {
+    from {
+      transform: translateY(120%); 
+    }
+    50% {
+        transform: translateY(-2%);
+      }
+    to {
+      transform: translateY(0); 
+    }
+  }

@@ -34,9 +34,6 @@ const TaskForm = ({ taskList, setTaskList }) => {
 
     return (
         <form className="create" onSubmit={handleAddTask}>
-            <h3>Add Task</h3>
-
-            <label>Task Name:</label>
             <input
                 type="text"
                 value={taskName}
