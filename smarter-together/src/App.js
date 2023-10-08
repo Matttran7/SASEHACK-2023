@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import NumUsers from './Components/NumUsers';
 import TaskCardContainer from './Components/TaskCardContainer';
 import { sortHighLow } from './ProcessData/SortComponents';
+import './App.css';
 
 function App() {
   const [numUsers, setNumUsers] = useState(1);
@@ -35,9 +36,11 @@ function App() {
       {/* get NumUsers input*/}
       <NumUsers setNumUsers={setNumUsers} />
       {/* dynamic TaskCardContainer based on numUsers*/}
+      <div className="task-card-container-list">
       {[...Array(numUsers || 1)].map((_, index) => (
         <TaskCardContainer key={index} id={`taskCardContainer${index}`} ref={(ref) => (taskCardContainerRefs.current[index] = ref)} />
       ))}
+      </div>
       <button onClick={logAllTaskData}>Log All Task Data</button>
     </div>
   );

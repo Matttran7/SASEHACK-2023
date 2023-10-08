@@ -1,6 +1,7 @@
 import React, { useState, useImperativeHandle, forwardRef } from 'react';
 import TaskCard from './TaskCard';
 import TaskForm from './TaskForm';
+import './TaskCardContainer.css';
 
 const TaskCardContainer = ({ id }, ref) => {
   const [taskList, setTaskList] = useState([]);
@@ -18,13 +19,16 @@ const TaskCardContainer = ({ id }, ref) => {
   };
 
   return (
-    <div id={id}>
+    <div id={id} className="task-card-container">
       <div>
         {taskList && taskList.map((task) => (
           <TaskCard key={task.taskName} task={task} onDelete={deleteTask} />
         ))}
       </div>
-      <TaskForm taskList={taskList} setTaskList={setTaskList} />
+      <div className="banner"></div>
+      <div className="task-form">
+        <TaskForm taskList={taskList} setTaskList={setTaskList} />
+      </div>
     </div>
   );
 };
