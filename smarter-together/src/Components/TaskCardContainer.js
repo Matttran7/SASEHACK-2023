@@ -27,7 +27,7 @@ const TaskCardContainer = ({ id }, ref) => {
           ))}
         </div> 
       </div>
-      <div className="banner"><p>Add Task</p></div>
+      <div className="banner"><p>add task</p></div>
       <div className="task-form">
         <TaskForm taskList={taskList} setTaskList={setTaskList} />
       </div>

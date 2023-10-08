@@ -19,7 +19,7 @@ const NumUsers = ({ setNumUsers }) => {
             type="range"
             id="userNumber"
             min="1"
-            max="8"
+            max="5"
             value={userNumber}
             onChange={handleInputChange}
           />

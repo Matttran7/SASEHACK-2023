@@ -24,26 +24,30 @@ header {
     align-items: center;
     height: 50px;
     background-color: transparent;
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
     margin-right: 10px;
     margin-left: 10px;
     padding: 0;
 }
 .UserInputBox h2 {
-  margin-bottom: 1rem; 
+  margin-bottom: .4rem; 
   font-weight: 200;
   font-family: "Space Grotesk", sans-serif;
+  color: whitesmoke;
 }
 .UserInputBox p {
   font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
     font-weight: 800;
+    color: whitesmoke;
+    margin-top: .1rem;
 }
 
 .UserInputBox input[type="range"] {
   -webkit-appearance: none; 
   -moz-appearance: none; 
   background-color: transparent;
+  margin-top: .2rem;
 }
 
 .UserInputBox input[type="range"]::-webkit-slider-thumb {
