@@ -1,0 +1,42 @@
+/* Font ideas from studywithme.io */
+
+.timer-container {
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+
+    padding: 3rem;
+    border-radius: 10px;
+    color: whitesmoke;
+
+    text-align: center;
+    font-family: "Space Grotesk",sans-serif;
+}
+  
+  .timer-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+  
+  .timer-container p {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "Space Grotesk",sans-serif;
+  }
+  
+  .timer-container button {
+    margin-top: 1rem;
+    background-color: whitesmoke;
+    color: black;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .timer-container button:hover {
+    background-color: transparent;
+    color: whitesmoke;
+  }
