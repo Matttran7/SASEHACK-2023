@@ -14,3 +14,4 @@ Features:
 Requirements:
 > npm install uuid
 > npm install react-input-slider 
+> npm install react-router-dom
