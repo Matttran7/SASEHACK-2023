@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
 .task-card-container-list {
     display: flex;
     flex-wrap: nowrap;
@@ -12,7 +14,7 @@
     vertical-align: top;
     padding: 10px;
     margin: 10px;
-    animation: enterFromBottom .7s linear; /* Animation properties */
+    animation: enterFromBottom .7s linear; 
   }
 
   @keyframes enterFromBottom {
@@ -25,4 +27,37 @@
     to {
       transform: translateY(0); 
     }
+  }
+
+  .SubmitBtn {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 25px;
+    padding: 25px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    color: #000000;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .SubmitBtn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .SubmitBtn:hover,
+  .SubmitBtn:active {
+    color: #ffffff;
+    background: #000000;
   }
