@@ -5,6 +5,7 @@ import { sortHighLow } from './ProcessData/SortComponents';
 import './App.css';
 import IntervalSettings from './Components/IntervalSettings';
 import Timer from './Components/Timer';
+import TaskDisplay from './Components/TaskDisplay';
 
 function App() {
   const [numUsers, setNumUsers] = useState(1);
@@ -61,29 +62,9 @@ function App() {
 
       {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
 
-      {submitClicked && (
-        <div>
-          
-          <h2>Tasks TO-DO</h2>
-          {sortedLists.map((sortedData, index) => (
-            
-            <div key={index}>
-              {/* Render your sorted data here */}
+      {submitClicked && <TaskDisplay sortedLists={sortedLists} setSortedLists={setSortedLists}/>}
 
-              <p>List {index + 1}</p>
-              {sortedData.map((item, itemIndex) => (
-                <div key={itemIndex}>
-                  <p>Task Name: {item.taskName}</p>
-                </div>
-              ))}
-            </div>
-          ))}
-
-          
-
-          {/* <button onClick={() => {setSubmitClicked(!submitClicked)}}>Go Back</button> */}
-        </div>
-      )}
+      
     </div>
   );
 }
