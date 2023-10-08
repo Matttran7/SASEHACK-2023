@@ -1,3 +1,5 @@
+/* Background Credit to Micahel Shillingburg at https://michaelshillingburg.tumblr.com/post/134780307923 */
+
 .task-card-container-list {
   display: flex;
   flex-wrap: nowrap;
@@ -8,14 +10,6 @@
   overflow: auto;
 }
 
-/* .task-card-container {
-  display: inline-block;
-  vertical-align: top;
-  padding: 10px;
-  margin: 10px;
-  animation: enterFromBottom 0.7s linear;
-  flex-shrink: 0;
-} */
 
 @keyframes enterFromBottom {
   from {
@@ -38,7 +32,7 @@ body {
   background-color: #ffffff;
   font-family: "Space Grotesk",sans-serif;;
   overflow: auto;
-  background-image: url('https://media.giphy.com/media/l4KihuqeuJEi9qLSM/giphy.gif');
+  background-image: url(./backgrounds/rippling_background.gif);
   background-size: cover;
 }
 
@@ -47,8 +41,10 @@ body {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
-  padding: 25px 20px;
-  display: inline-block;
+  padding: 0 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
   transition: all 0.3s;
   border: none;
   border-radius: 2rem;
@@ -58,8 +54,9 @@ body {
   height: 4rem;
   position: absolute;
   right: 0;
-  margin-right: 2rem;
+  margin-right: 3rem;
   margin-bottom: 0px;
+  margin-top: 1rem;
 }
 .SubmitBtn:after {
   content: '';
@@ -73,6 +70,7 @@ body {
 .SubmitBtn:active {
   color: #ffffff;
   background: transparent;
+  cursor: pointer;
 }
 /** --------------- Top of page ---*/
 .header {
@@ -100,6 +98,9 @@ body {
 
 
 .displayTasks {
+  display: flex;
   overflow: auto;
+  justify-content: center;
+  align-items: center;
 }
 

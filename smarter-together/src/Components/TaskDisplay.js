@@ -14,21 +14,21 @@ const TaskDisplay = ({ sortedLists, setSortedLists }) => {
     };
   
     return (
-      <div className='taskDisplayContainer'>
-        <h2>Tasks TO-DO</h2>
-        {sortedLists.map((sortedData, index) => (
-          <div key={index}>
-            <p>List {index + 1}</p>
-            {sortedData.map((item, itemIndex) => (
-              <div key={itemIndex}>
-                {/* Use the TaskCard component to display each task */}
-                <TaskCard key={item.id} task={item} onDelete={deleteTask} />
-              </div>
-            ))}
-          </div>
-        ))}
-        <button onClick={() => console.log(sortedLists)}>Testing</button>
-      </div>
+      <div className='boxContainingContainers'>
+        <div className='taskDisplayContainer'>
+          {sortedLists.map((sortedData, index) => (
+            <div key={index} className='sortedListBoxDisplay'>
+              <p className='titleOfSortedListBeingDisplayed'>List {index + 1}</p>
+              {sortedData.map((item, itemIndex) => (
+                <div key={itemIndex}>
+                  {/* Use the TaskCard component to display each task */}
+                  <TaskCard key={item.id} task={item} onDelete={deleteTask} />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+    </div>
     );
   };
   

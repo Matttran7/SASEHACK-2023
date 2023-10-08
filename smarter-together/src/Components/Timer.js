@@ -63,7 +63,7 @@ const Timer = ({ studyInterval, breakInterval }) => {
       </div>
       <div>
         <button onClick={isRunning ? stopTimer : startTimer}>
-          {isRunning ? 'stop' : 'start'}
+          {isRunning ? 'pause' : 'start'}
         </button>
       </div>
       {showBreakTimeModal && (

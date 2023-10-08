@@ -1,12 +1,14 @@
 .interval-group h2 {
     font-weight: 200;
     font-family: "Space Grotesk", sans-serif;
+    color: whitesmoke;
   }
   
   .interval-group p {
     font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
     font-weight: 800;
+    color: whitesmoke;
   }
   
   .interval-settings {

@@ -56,7 +56,7 @@ function App() {
                 onStudyIntervalChange={setStudyInterval}
               /> </div>
           }
-          {!submitClicked && <button className="SubmitBtn" onClick={logAllTaskData}>Log All Task Data</button>}
+          {!submitClicked && <button className="SubmitBtn" onClick={logAllTaskData}>sort tasks</button>}
         </div>
         </header>
         <div className='line2'>
