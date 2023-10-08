@@ -8,27 +8,26 @@ const IntervalSettings = ({ breakInterval, studyInterval, onBreakIntervalChange,
       <InputSlider
         axis='x'
         x={studyInterval}
-        xmin={300}
-        xmax={5400}
+        xmin={0.1}
+        xmax={90}
         onChange={({ x }) => {
           onStudyIntervalChange(x);
         }}
       />
-      <p>Minutes: {Math.floor(studyInterval / 60)}</p>
-      <p>Seconds: {studyInterval % 60}</p>
+      <p>Minutes: {studyInterval }</p>
 
       <h2>Break Interval</h2>
       <InputSlider
         axis='x'
         x={breakInterval}
-        xmin={60}
-        xmax={1200}
+        xmin={1}
+        xmax={20}
         onChange={({ x }) => {
           onBreakIntervalChange(x);
         }}
       />
-      <p>Minutes: {Math.floor(breakInterval / 60)}</p>
-      <p>Seconds: {breakInterval % 60}</p>
+      <p>Minutes: {breakInterval}</p>
+
     </div>
   );
 };

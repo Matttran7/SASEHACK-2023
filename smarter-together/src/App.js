@@ -4,12 +4,13 @@ import TaskCardContainer from './Components/TaskCardContainer';
 import { sortHighLow } from './ProcessData/SortComponents';
 import './App.css';
 import IntervalSettings from './Components/IntervalSettings';
+import Timer from './Components/Timer';
 
 function App() {
   const [numUsers, setNumUsers] = useState(1);
   const [sortedLists, setSortedLists] = useState([]);
-  const [breakInterval, setBreakInterval] = useState(300);
-  const [studyInterval, setStudyInterval] = useState(1200);
+  const [breakInterval, setBreakInterval] = useState(5);
+  const [studyInterval, setStudyInterval] = useState(25);
   const [submitClicked, setSubmitClicked] = useState(false);
   const taskCardContainerRefs = useRef([]);
 
@@ -58,6 +59,8 @@ function App() {
 
       {!submitClicked && <button onClick={logAllTaskData}>Log All Task Data</button>}
 
+      {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
+
       {submitClicked && (
         <div>
           
@@ -66,6 +69,7 @@ function App() {
             
             <div key={index}>
               {/* Render your sorted data here */}
+
               <p>List {index + 1}</p>
               {sortedData.map((item, itemIndex) => (
                 <div key={itemIndex}>
@@ -74,6 +78,8 @@ function App() {
               ))}
             </div>
           ))}
+
+          
 
           {/* <button onClick={() => {setSubmitClicked(!submitClicked)}}>Go Back</button> */}
         </div>
