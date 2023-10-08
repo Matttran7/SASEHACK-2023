@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import NumUsers from './Components/NumUsers';
 import TaskCardContainer from './Components/TaskCardContainer';
+import { sortHighLow } from './ProcessData/SortComponents';
 
 function App() {
   const [numUsers, setNumUsers] = useState(0);
@@ -15,7 +16,9 @@ function App() {
         newData.push(taskCardContainerData);
       }
     }
-    console.log(newData);
+    
+    const sortedData = sortHighLow(newData);
+    console.log(sortedData);
   };
 
   return (
