@@ -1,4 +1,4 @@
-# SASEHACK-2023
+# SASEHACK-2023 
 
 2 biggest factors that negatively impact many college student's mental health:
  1. Academic Stress 
@@ -13,3 +13,4 @@ Features:
 
 Requirements:
 > npm install uuid
+> npm install react-input-slider 
