@@ -1,7 +1,8 @@
 # SASEHACK-2023
 ## Team: OpenToWork
 ### Authors:
-
+###     Hao Zhu
+###     Matthew Tran
 2 biggest factors that negatively impact many college student's mental health:
  1. Academic Stress 
  2. Test anxiety
