@@ -122,6 +122,7 @@ body {
   .feature-description {
     font-size: 1rem;
     color: #ffffff;
+    line-height: 150%;
   }
 
   .sectionContainer {
