@@ -1,4 +1,6 @@
-# SASEHACK-2023 
+# SASEHACK-2023
+## Team: OpenToWork
+### Authors:
 
 2 biggest factors that negatively impact many college student's mental health:
  1. Academic Stress 
@@ -18,6 +20,6 @@ Requirements:
 
 To run the program you first:
 1. cd into the smarter-together folder [cd smarter-together]
-2. You should be able to [npm start] the code, make sure you have the following dependencies installed
-    2. a. npm install react-input-slider
-    2. b. npm install uuid
+2. You should be able to [npm start] the code, make sure you have the following dependencies installed<br />
+    2. a. npm install react-input-slider<br />
+    2. b. npm install uuid<br />
