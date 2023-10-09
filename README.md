@@ -17,7 +17,7 @@ Requirements:
 > npm install react-router-dom
 
 To run the program you first:
-cd into the smarter-together folder [cd smarter-together]
-You should be able to [npm start] the code, make sure you have the following dependencies installed
-npm install react-input-slider
-npm install uuid
+1. cd into the smarter-together folder [cd smarter-together]
+2. You should be able to [npm start] the code, make sure you have the following dependencies installed
+    2. a. npm install react-input-slider
+    2. b. npm install uuid
