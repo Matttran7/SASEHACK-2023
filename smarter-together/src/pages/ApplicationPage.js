@@ -6,6 +6,7 @@ import './ApplicationPage.css';
 import IntervalSettings from '../Components/IntervalSettings';
 import Timer from '../Components/Timer';
 import TaskDisplay from '../Components/TaskDisplay';
+import { Link } from 'react-router-dom';
 
 function ApplicationPage() {
   const [numUsers, setNumUsers] = useState(1);
@@ -66,6 +67,8 @@ function ApplicationPage() {
             ))}
           </div>
         </div>
+
+        {submitClicked && <Link to="/"><button className='goBackLandingBtn'>home</button></Link>}
         {submitClicked && <Timer breakInterval={breakInterval} studyInterval={studyInterval}/>}
 
         <div className='displayTasks'>

@@ -104,4 +104,31 @@
     align-items: center;
   }
   
-  
+.goBackLandingBtn {
+  font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0 20px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: all 0.3s;
+    border: none;
+    border-radius: 1rem;
+    color: #000000;
+    background-color: whitesmoke;
+    width: 5rem;
+    height: 3rem;
+    position: absolute;
+    left: 2rem;
+    margin-right: 3rem;
+    margin-bottom: 0px;
+    margin-top: 1rem;
+    top: 2rem;
+}
+
+.goBackLandingBtn:hover {
+  color: white;
+  cursor: pointer;
+}
+
