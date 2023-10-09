@@ -58,8 +58,9 @@ body {
   }
   
   .mission-statement {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: bold;
   }
   
   /* Site Description styles */
@@ -69,7 +70,8 @@ body {
   
   .site-description {
     font-size: 1.2rem;
-    color: #555;
+    color: #ffffff;
+    font-weight: bold;
   }
   
   /* Features section styles */
@@ -94,24 +96,24 @@ body {
   .feature-title {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
+    margin-bottom: .5rem;
   }
   
   .feature-description {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1rem;
+    color: #ffffff;
   }
 
   .sectionContainer {
-    background-color: whitesmoke;
     margin-top: 15rem;
     padding: 2rem;
     border-radius: 1rem;
     width: 90%;
+    background-color: transparent;
   }
   
   .featureContainer {
-    font-weight: bolder;
     text-align: left;
   }
   
