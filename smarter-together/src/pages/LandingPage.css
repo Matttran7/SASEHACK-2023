@@ -1,0 +1,118 @@
+
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+body {
+    overflow: auto;
+}
+  
+  /* Main container styles */
+  .landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    margin-top: 3rem;
+  }
+  
+  .app-name {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Get Started Button styles */
+  .get-started {
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+  }
+  
+  .get-started-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+  }
+  
+  .get-started-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mission Statement styles */
+  .mission {
+    margin-top: 20px;
+  }
+  
+  .mission-statement {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Site Description styles */
+  .description {
+    margin-top: 20px;
+  }
+  
+  .site-description {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Features section styles */
+  .features {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+    width: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .feature {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .feature-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .feature-description {
+    font-size: 1.2rem;
+    color: #555;
+  }
+
+  .sectionContainer {
+    background-color: whitesmoke;
+    margin-top: 15rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+  }
+  
+  .featureContainer {
+    font-weight: bolder;
+    text-align: left;
+  }
+  
+  
