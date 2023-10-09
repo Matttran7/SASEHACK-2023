@@ -9,8 +9,8 @@ const IntervalSettings = ({ breakInterval, studyInterval, onBreakIntervalChange,
     <h2>Study Interval</h2>
     <input
       type="range"
-      min={.05}
-      max={60}
+      min={5}
+      max={90}
       value={studyInterval}
       onChange={(e) => onStudyIntervalChange(e.target.value)}
     />
@@ -21,7 +21,7 @@ const IntervalSettings = ({ breakInterval, studyInterval, onBreakIntervalChange,
     <h2>Break Interval</h2>
     <input
       type="range"
-      min={.05}
+      min={1}
       max={20}
       value={breakInterval}
       onChange={(e) => onBreakIntervalChange(e.target.value)}
