@@ -7,7 +7,7 @@ const Timer = ({ studyInterval, breakInterval }) => {
   const [isRunning, setIsRunning] = useState(false);
   const [intervalType, setIntervalType] = useState('Study');
   const [showBreakTimeModal, setShowBreakTimeModal] = useState(false);
-
+  const [showStudyTimeModal, setShowStudyTimeModal] = useState(false);
   useEffect(() => {
     let timer;
 
@@ -24,6 +24,7 @@ const Timer = ({ studyInterval, breakInterval }) => {
       } else {
         setCurrentTime(studyInterval * 60);
         setIntervalType('Study');
+        setShowStudyTimeModal(true)
         setIsRunning(false); // Pause the timer after transitioning to study
       }
     }
@@ -54,7 +55,9 @@ const Timer = ({ studyInterval, breakInterval }) => {
   const closeBreakTimeModal = () => {
     setShowBreakTimeModal(false);
   };
-
+  const closeStudyTimeModal = () => {
+    setShowStudyTimeModal(false);
+  };
   return (
     <div className='timer-container'>
       <h2>{intervalType} Time</h2>
@@ -67,7 +70,10 @@ const Timer = ({ studyInterval, breakInterval }) => {
         </button>
       </div>
       {showBreakTimeModal && (
-        <Modal isOpen={true} onClose={closeBreakTimeModal} />
+        <Modal isOpen={true} onClose={closeBreakTimeModal} isBreak={true} />
+      )}
+      {showStudyTimeModal && (
+        <Modal isOpen={true} onClose={closeStudyTimeModal} isBreak={false} />
       )}
     </div>
   );

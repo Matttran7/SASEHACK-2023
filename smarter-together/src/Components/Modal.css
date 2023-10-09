@@ -17,7 +17,7 @@
   }
   
   .modal-content {
-    background-color: #353030;
+    background-color: rgba(120, 7, 7, 0.5);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
