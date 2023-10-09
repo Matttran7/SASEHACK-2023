@@ -6,7 +6,7 @@ const LandingPage = () => {
     
   return (
     <div className="landing-page">
-      <section className="header">
+      <section className="company-name">
         <h1 className="app-name">SmarterTogether</h1>
       </section>
 

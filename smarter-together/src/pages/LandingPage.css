@@ -47,6 +47,11 @@ body {
     }
 
 
+.company-name {
+    margin-top: 3rem;
+}
+
+
   .get-started {
     margin-top: 5rem;
     justify-content: center;
