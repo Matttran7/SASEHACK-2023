@@ -17,7 +17,8 @@ const LandingPage = () => {
     </div>
 
       <section className="sectionContainer">
-        <p className="mission-statement">SmarterTogether aspires to unite individuals <br></br> in cultivating healthy work habits and enhancing overall well-being</p>
+        <p className="mission-statement">Uniting individuals. <br></br> Cultivating healthy work habits. Enhancing overall well-being.</p>
+        <p className='site-description'>SmarterTogether is suitable for all ages and versatile for various tasks, with a focus on enhancing study sessions and reducing decision fatigue, primarily designed for college students.</p>
       </section>
 
       <section className="features">
@@ -25,6 +26,7 @@ const LandingPage = () => {
           <h2 className="feature-title">The Challenge</h2>
           <p className="feature-description">The main challenge most students face when dealing with academic stress revolves around the effectiveness of their study habits as well as overcoming decision paralysis. Many student’s study a great deal, however, the issue lies in the quality of their studies. They often isolate themselves and study for long periods without breaks. Many of the time students procrastinate due to the overwhelming volume of tasks, which often leads to last minute cramming. The sheer amount of stress that results negatively impacts a student’s mental health greatly.
 </p>
+        
         </div>
 
         <div className="featureContainer">

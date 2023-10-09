@@ -82,9 +82,10 @@ body {
   }
   
   .mission-statement {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ffffff;
     font-weight: bold;
+    
   }
   
   /* Site Description styles */
@@ -93,7 +94,7 @@ body {
   }
   
   .site-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #ffffff;
     font-weight: bold;
   }
@@ -141,4 +142,9 @@ body {
     text-align: left;
   }
   
-  
+  .site-description {
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 150%;
+    margin-top: 1rem;
+  }
