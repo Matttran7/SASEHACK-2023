@@ -4,7 +4,8 @@
 1. Hao Zhu
 2. Matthew Tran
 <br />
-**2 biggest factors that negatively impact many college student's mental health:**
+
+**2 biggest factors that negatively impact many college student's mental health:**<br />
  1. Academic Stress 
  2. Test anxiety
 
