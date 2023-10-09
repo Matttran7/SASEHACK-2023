@@ -1,4 +1,5 @@
-# SASEHACK-2023
+# SmarterTogether
+SASEHACK-2023 
 ## Team: OpenToWork
 ### Authors:
 1. Hao Zhu
