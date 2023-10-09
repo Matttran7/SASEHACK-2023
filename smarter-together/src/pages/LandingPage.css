@@ -30,26 +30,49 @@ body {
     font-weight: bold;
     color: rgb(255, 255, 255);
   }
+
+  .centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Ensure the container takes the full viewport height */
+  }
   
   /* Get Started Button styles */
+
+  @keyframes shadow-pulse
+    {
+    0% {
+        box-shadow: 0 0 0 0px rgba(38, 186, 255, 0.747);
+    }
+    100% {
+        box-shadow: 0 0 7px 25px rgba(255, 255, 255, 0);
+    }
+    }
+
+
   .get-started {
-    margin-top: 20rem;
-    margin-bottom: 5rem;
+    margin-top: 5rem;
+    justify-content: center;
   }
   
   .get-started-button {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-
+    margin: 25% auto 0 auto;
+    width: 280px;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    background: #0353ad;
+    border-radius: 50px;
+    animation: shadow-pulse 1.5s infinite;
   }
   
   .get-started-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(255, 255, 255, 0.514);
+    color: black;
+    cursor: pointer;
   }
   
   /* Mission Statement styles */

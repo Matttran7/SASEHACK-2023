@@ -10,9 +10,11 @@ const LandingPage = () => {
         <h1 className="app-name">SmarterTogether</h1>
       </section>
 
+    <div className='centered-container'>
       <section className="get-started">
         <Link to="/application"><button className="get-started-button">Get Started</button></Link>
       </section>
+    </div>
 
       <section className="sectionContainer">
         <p className="mission-statement">SmarterTogether aspires to unite individuals <br></br> in cultivating healthy work habits and enhancing overall well-being</p>
