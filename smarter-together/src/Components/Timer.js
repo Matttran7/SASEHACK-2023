@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Modal from './Modal'; // Import your Modal component
+import Modal from './Modal';
 import './Timer.css';
 
 const Timer = ({ studyInterval, breakInterval }) => {
-  const [currentTime, setCurrentTime] = useState(studyInterval * 60); // Initial time in seconds
+  const [currentTime, setCurrentTime] = useState(studyInterval * 60); // tnitial time in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [intervalType, setIntervalType] = useState('Study');
   const [showBreakTimeModal, setShowBreakTimeModal] = useState(false);
@@ -20,12 +20,12 @@ const Timer = ({ studyInterval, breakInterval }) => {
         setCurrentTime(breakInterval * 60);
         setIntervalType('Break');
         setShowBreakTimeModal(true); // Show the break time modal
-        setIsRunning(false); // Pause the timer after transitioning to break
+        setIsRunning(false); // pause the timer after transitioning to break
       } else {
         setCurrentTime(studyInterval * 60);
         setIntervalType('Study');
         setShowStudyTimeModal(true)
-        setIsRunning(false); // Pause the timer after transitioning to study
+        setIsRunning(false); // pause the timer after transitioning to study
       }
     }
 

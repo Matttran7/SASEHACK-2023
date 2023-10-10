@@ -17,6 +17,8 @@ function ApplicationPage() {
   const taskCardContainerRefs = useRef([]);
 
   const logAllTaskData = () => {
+
+    
     const newData = [];
 
     if (numUsers < 1) {
@@ -37,7 +39,7 @@ function ApplicationPage() {
 
     const sortedData = sortHighLow(newData);
     setSortedLists(sortedData);
-    setSubmitClicked(true); // Set submitClicked to true to indicate that data has been logged.
+    setSubmitClicked(true); // set submitClicked to true to indicate that data has been logged.
   };
 
   return (
