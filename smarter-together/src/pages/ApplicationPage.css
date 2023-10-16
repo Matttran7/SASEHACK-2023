@@ -1,22 +1,26 @@
 /* Background Credit to Micahel Shillingburg at https://michaelshillingburg.tumblr.com/post/134780307923 */
+body.animation-in-progress {
+  overflow: hidden;
+}
 
-.task-card-container-list {
+.task-card-container-list{
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
     justify-content: center;
     margin: auto;
-    align-items: flex-start;
+    align-items: flex-end;
     overflow: auto;
   }
-  
-  
+  .task-card-container {
+    animation: enterFromBottom .5s linear;
+  }
   @keyframes enterFromBottom {
     from {
-      transform: translateY(120%);
+      transform: translateY(100%);
     }
     50% {
-      transform: translateY(-2%);
+      transform: translateY(-4%);
     }
     to {
       transform: translateY(0);

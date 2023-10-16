@@ -13,7 +13,6 @@ body {
     overflow: auto;
 }
   
-  /* Main container styles */
   .landing-page {
     display: flex;
     flex-direction: column;
@@ -33,10 +32,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh; /* Ensure the container takes the full viewport height */
+    min-height: 70vh;
   }
   
-  /* Get Started Button styles */
+  /* "Get Started" */
 
   @keyframes shadow-pulse
     {
